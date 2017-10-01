@@ -14,6 +14,8 @@ class ItemController extends Controller
     public function index()
     {
         //
+        $items = Item::all();
+        return response()->json($items);
     }
 
     /**
@@ -34,7 +36,13 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new item([
+          'name' => $request->get('name'),
+          'price' => $request->get('price')
+        ]);
+        $item->save();
+        return response()->json('Successfully added');
+
     }
 
     /**

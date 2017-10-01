@@ -22,7 +22,6 @@ import CreateItem from './components/CreateItem';
 render(
   <Router history={browserHistory}>
     <Route path="/" component={Master}>
-      <Route path="/add-item" component={CreateItem}/>
+      <Route path="add-item" component={CreateItem}/>
     </Route>
-  </Router>,
-  document.getElementById('example'));
+  </Router>,document.getElementById('example'));

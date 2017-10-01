@@ -14,5 +14,4 @@
 Route::get('/', function () {
     return view('newwelcome');
 });
-
-Route::resource('items','ItemController');
+Route::resource('items', 'ItemController');

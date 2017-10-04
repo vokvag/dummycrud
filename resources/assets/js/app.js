@@ -13,11 +13,13 @@ import DisplayItem from './components/DisplayItem';
 import EditItem from './components/EditItem';
 
 render(
-  <Router history={browserHistory}>
-      <Route path="/" component={Master} >
+  (<Router history={browserHistory}>
+    <div>
+      <Route path="/" component={Master} />
         <Route path="/add-item" component={CreateItem} />
         <Route path="/display-item" component={DisplayItem} />
         <Route path="/edit/:id" component={EditItem} />
-      </Route>
-    </Router>,
+
+    </div>
+    </Router>),
         document.getElementById('example'));
